@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Letter to My Best Friend</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #fff0f5;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px;
+            background: #ffffffcc;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            text-align: center;
+            color: #d96c6c;
+        }
+        .letter {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #4b2e2e;
+            white-space: pre-line;
+            border-right: 2px solid;
+            overflow: hidden;
+            animation: typing 6s steps(60, end), blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #4b2e2e }
+        }
+        .signature {
+            margin-top: 40px;
+            text-align: right;
+            font-style: italic;
+        }
+        .heart {
+            text-align: center;
+            font-size: 30px;
+            color: #e25555;
+            margin-top: 20px;
+        }
+        #surprise {
+            text-align: center;
+            margin-top: 40px;
+        }
+        button {
+            background-color: #d96c6c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #bf5454;
+        }
+        .hidden-message {
+            margin-top: 20px;
+            display: none;
+            font-weight: bold;
+            color: #7d3244;
+        }
+        .floating-heart {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            font-size: 24px;
+            animation: float 6s infinite linear;
+        }
+        @keyframes float {
+            0% { top: 100%; opacity: 1; }
+            100% { top: -10%; opacity: 0; }
+        }
+        audio {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>To My Best Friend</h1>
+        
+        <div class="letter" id="letter-text">
+            Dear [Leane May Gomes],
+
+            I just wanted to take a moment to let you know how much you mean to me. Through every up and down, you've been there — with a kind word, a funny meme, or just the right kind of silence. You're not just my best friend, you're family.
+
+            Whether we're laughing until we cry or leaning on each other during tough times, I treasure every single moment. I’m so grateful for your presence in my life, and I hope you always remember how loved and appreciated you are.
+
+            Here's to all the memories we've made and all the adventures still to come.
+        </div>
+
+        <p class="signature">
+            With all my love,<br>
+            [RAAAAAAAHHHHHHGER]
+        </p>
+
+        <div class="heart">❤️</div>
+
+        <div id="surprise">
+            <button onclick="revealMessage()">Click for a Surprise 🎁</button>
+            <div class="hidden-message" id="hiddenMessage">
+                You're the BEST. I’m lucky to have you. 🌟💖
+            </div>
+        </div>
+
+        <audio controls>
+            <source src="your-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Floating hearts -->
+    <div class="floating-heart" style="left: 20%;">💗</div>
+    <div class="floating-heart" style="left: 40%; animation-delay: 2s;">💖</div>
+    <div class="floating-heart" style="left: 60%; animation-delay: 4s;">💘</div>
+    <div class="floating-heart" style="left: 80%; animation-delay: 6s;">💕</div>
+
+    <script>
+        function revealMessage() {
+            document.getElementById('hiddenMessage').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
